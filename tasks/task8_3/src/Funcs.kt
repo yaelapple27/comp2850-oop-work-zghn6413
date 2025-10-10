@@ -5,6 +5,12 @@ typealias Record = Pair<String,Double>
 fun fetchData(): List<Record> {
   // Create and return a simulated dataset here
   // Use the listOf() and to() functions to create the dataset
+  return listOf(
+    "England" to 15.3,
+    "Turkey" to 20.8,
+    "Peru" to 32.6,
+    "Iran" to 31.2
+  )
 }
 
 // Challenge: compute average temperature with one line of code
