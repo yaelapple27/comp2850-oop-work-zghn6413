@@ -25,4 +25,16 @@ class GradeTest : StringSpec({
     }
 
     // Add more tests here
+    "Grade of below 0" {
+        withClue("Mark=-1") { grade(-1) shouldBe "?" }
+        withClue("Mark=-12") { grade(-12) shouldBe "?" }
+        withClue("Mark=-100") { grade(-100) shouldBe "?" }
+    }
+
+    "Grade of above 100" {
+        withClue("Mark=101") { grade(-1) shouldBe "?" }
+        withClue("Mark=1948232") { grade(-12) shouldBe "?" }
+        withClue("Mark=9040984028") { grade(-100) shouldBe "?" }
+    }
+
 })
